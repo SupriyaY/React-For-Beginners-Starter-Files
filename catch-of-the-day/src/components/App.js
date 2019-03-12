@@ -1,8 +1,9 @@
 import React from "react";
 import Header from './Header';
 import Order from './Order';
-import Inventory from './Inventory';
+import Inventory from './Inventory'; 
 import sampleFishes from '../sample-fishes';
+import Fish from './Fish';
 
 class App extends React.Component {
   state = {
@@ -28,9 +29,13 @@ loadSamplesFishes = () => {
     <div className="catch-of-the-day">
     <div className="menu">
     <Header tagline="Fresh Seafood Market"/>
+    <ul className="fishes">
+    {Object.keys(this.state.fishes).map(key => <p>{key}</p>)}
+    </ul>
     </div>
      <Order/>
-    <Inventory addFish={this.addFish} loadSampleFishes={this.loadSamplesFishes}/>
+    <Inventory addFish={this.addFish} 
+    loadSampleFishes={this.loadSamplesFishes}/>
     </div>
     );
   }
