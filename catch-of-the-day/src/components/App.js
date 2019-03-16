@@ -23,6 +23,13 @@ class App extends React.Component {
 loadSamplesFishes = () => {
   this.setState({fishes: sampleFishes})
 }
+
+addToOrder = (key) => {
+  //1. take a copy of state
+  //2. Either add to the order or update the number in our order
+  //3. call set state to update our state object
+
+}
   
   render() {
     return (
